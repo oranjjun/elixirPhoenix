@@ -67,6 +67,3 @@ ssl: true
 #
 #     config :hello, HelloWeb.Endpoint, server: true
 #
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
