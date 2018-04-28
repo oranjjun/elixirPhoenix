@@ -22,11 +22,11 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Facebook config tokens
+config :facebook_messenger,
+  facebook_page_token: System.get_env("FB_PAGE_ACCESS_TOKEN"),
+  challenge_verification_token: System.get_env("FB_VERIFICATION_TOKEN")
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
-
-# Facebook config tokens
-config :facebook_messenger,
-    facebook_page_token: System.get_env("FB_PAGE_ACCESS_TOKEN"),
-    challenge_verification_token: System.get_env("FB_VERIFICATION_TOKEN")
