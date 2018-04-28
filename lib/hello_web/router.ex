@@ -1,5 +1,6 @@
 defmodule HelloWeb.Router do
   use HelloWeb, :router
+  use FacebookMessenger.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -23,6 +24,8 @@ defmodule HelloWeb.Router do
     resources "/posts", PostController, only: [:index, :show]
     resources "/comments", CommentController, except: [:delete]
   end
+
+  facebook_routes "/api/webhook", KittyBotComplete.BotController
 
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do

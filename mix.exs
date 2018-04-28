@@ -20,7 +20,7 @@ defmodule Hello.Mixfile do
   def application do
     [
       mod: {Hello.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpotion]
     ]
   end
 
@@ -40,7 +40,9 @@ defmodule Hello.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:httpotion, "~> 3.0.2"},
+      {:phoenix_facebook_messenger, git: "https://github.com/Bilue/phoenix_facebook_messenger.git"}
     ]
   end
 
