@@ -24,8 +24,10 @@ config :logger, :console,
 
 # Facebook config tokens
 config :facebook_messenger,
-  facebook_page_token: "EAAKpDyl5QvwBAHZA9kZCNG7R6V2DlZAsFpeZATruFzJQFy0JE0K2UZB2bTX9hrPl1KKnSoytzeiRKckp2XU85fOh40PQ4RZBiM6yldskpK4ZCB9Ny1u5i2CxW2kAdXUQh0EpFzKQKamT4hxB2vyT2M3CNUuTBH5moDXcgHxRaTrJAZDZD",
-  challenge_verification_token: "P31xDdauUUIbjVPq5wli/00c5kYw58ioEnRD6AQyZghUqjiQ+IqlMdLZK4yZUQxh"
+  facebook_page_token: System.get_env("FB_PAGE_ACCESS_KEY"),
+  challenge_verification_token: System.get_env("FB_VERIFICATION_TOKEN")
+  # facebook_page_token: "EAAKpDyl5QvwBAHZA9kZCNG7R6V2DlZAsFpeZATruFzJQFy0JE0K2UZB2bTX9hrPl1KKnSoytzeiRKckp2XU85fOh40PQ4RZBiM6yldskpK4ZCB9Ny1u5i2CxW2kAdXUQh0EpFzKQKamT4hxB2vyT2M3CNUuTBH5moDXcgHxRaTrJAZDZD",
+  # challenge_verification_token: "P31xDdauUUIbjVPq5wli/00c5kYw58ioEnRD6AQyZghUqjiQ+IqlMdLZK4yZUQxh"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
