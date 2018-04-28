@@ -25,7 +25,7 @@ defmodule HelloWeb.Router do
     resources "/comments", CommentController, except: [:delete]
   end
 
-  facebook_routes "/api/webhook", KittyBotComplete.BotController
+  facebook_routes "/api/webhook", HelloWeb.BotController
 
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
