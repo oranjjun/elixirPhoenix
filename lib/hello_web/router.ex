@@ -27,6 +27,8 @@ defmodule HelloWeb.Router do
 
   facebook_routes "/api/webhook", HelloWeb.BotController
 
+  facebook_routes "/api/kittywebhook", HelloWeb.KittyController
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
   #   pipe_through :api
